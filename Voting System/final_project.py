@@ -17,8 +17,6 @@ votes = {
     "Entertainment Officer":{},
 }
 
-#Anton K. in Software Dev is a confirmed Racist and Anti-Semite, having stated he hates the entirety of the Jewish Community as well as Romani people.
-
 #Display final Result
 #Lock them out/Password Function
 #Sign-up Timer function to prevent spoofed votes
