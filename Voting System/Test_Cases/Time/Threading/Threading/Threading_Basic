@@ -1,0 +1,26 @@
+import threading
+import time
+
+def print_numbers():
+    for i in range(5):
+        print(f"Number: {i}")
+        time.sleep(1)  # Sleep for 1 second between prints
+
+def print_letters():
+    for letter in ['a', 'b', 'c', 'd', 'e']:
+        print(f"Letter: {letter}")
+        time.sleep(1.5)  # Sleep for 1.5 seconds between prints
+
+# Create threads for each function
+thread1 = threading.Thread(target=print_numbers)
+thread2 = threading.Thread(target=print_letters)
+
+# Start both threads
+thread1.start()
+thread2.start()
+
+# Wait for both threads to finish
+thread1.join()
+thread2.join()
+
+print("Both threads finished execution.")

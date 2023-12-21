@@ -1,0 +1,69 @@
+"""
+https://www.w3schools.com/python/
+
+Flask is like a shop manager with the web app being the shop.
+USED FOR EXAMPLE_WEBSITE
+How to Import:
+from flask import Flask, render_template
+Here, you're telling Python, "Hey, I want to use Flask's tools to create my shop."
+
+Shop Setup:
+app = Flask(__name__)
+This line is like saying, "Okay, let's open up the shop, and we'll call it by its current name."
+
+The front door of the shop:
+@app.route('/')
+def index():
+Think of @app.route('/') as the main entrance of the shop.
+When someone visits the main entrance (/), they get greeted by the function below it, index().
+
+Greeting:
+Inside index(), you have:
+name = "John"
+return render_template('index.html', name=name)
+Here, you're saying, 
+"When someone comes in (/), greet them with the name 'John'." 
+The render_template part is like showing them a greeting card (index.html) that says "Hello, John!"
+
+Shop Opening:
+if __name__ == '__main__':
+    app.run(debug=True)
+This is like finally opening your shop for business. 
+The debug=True is like having a security camera inside the shop; if something goes wrong, you can see where.
+
+In essence, Flask helps you set up a web page (or shop) where you:
+define how people (or users) interact with your site and what they see. 
+
+
+Threading:
+Multiple Tasks at a Restaurant
+Imagine you're at a restaurant.
+In a single-threaded scenario, there's only one waiter (or thread). 
+If you order a dish, the waiter takes your order, goes to the kitchen to get it, and then serves it to you. 
+Meanwhile, if someone else orders a drink, they have to wait until your order is fulfilled.
+
+Now, with multiple waiters (or threading), different waiters can take and process orders simultaneously.
+One waiter can get your food while another serves drinks to someone else.
+This speeds up service since tasks are handled concurrently.
+
+In Code: 
+Threading allows programs to execute multiple tasks at the same time by breaking them into smaller threads of execution.
+It's useful for tasks like handling multiple user requests simultaneously or performing tasks in the background while the main program continues to run.
+
+Time:
+A Clock on the Wall
+Think of time as the ticking of a clock on a wall.
+Just as you can look at a clock to know the current time, in programming, you can use the time module to measure durations, schedule tasks, or create delays.
+For example, if you want to see how long a task takes, you might start a timer, perform the task, and then stop the timer to measure the elapsed time.
+Similarly, you can schedule tasks to run after a certain period or create pauses between actions.
+
+In Code:
+The time module in Python provides functions to work with time-related tasks, such as getting the current time, measuring elapsed time, creating delays, or converting between different time representations.
+
+Queue:
+A Line at a Movie Theater
+Imagine a movie theater with a single entrance. If people form a line to buy tickets, it's a queue: first come, first served. The first person in line gets their ticket first, followed by the next, and so on.
+In programming, a queue is a data structure that follows this principle. Items (or data) are added to the back of the queue and removed from the front. This ensures that items are processed in the order they arrive, just like people getting their movie tickets.
+In Code: A queue is a collection of items that allows for adding (enqueue) and removing (dequeue) items in a specific order. It's useful for managing tasks in a first-in, first-out (FIFO) manner, such as processing tasks in the order they are received or handling requests sequentially.
+
+"""
